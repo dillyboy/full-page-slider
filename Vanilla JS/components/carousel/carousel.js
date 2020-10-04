@@ -1,5 +1,5 @@
 (() => {
-  const $ = function( id ) { return document.getElementById( id ); }
+  const $ = function( id ) { return document.getElementById( id ); } // make it easier to select by id
   const TIMEOUT_DURATION = 5000;
   let timer = setInterval(autoPlay, TIMEOUT_DURATION);
 
@@ -24,22 +24,22 @@
     let navElements = '';
     pages.forEach(page => {
       slideElements += `
-    <div>
-      <div class="TextContainer ${page.classes.join(' ')}">
-        <h3>${page.heading}</h3>
-        <h1>${page.subHeading}</h1>
-        <button type="button">Explore Now</button>
-      </div>
-      <img src="images/slider/${page.no}.jpg" alt="${page.heading}">
-    </div>`
+        <div>
+          <div class="TextContainer ${page.classes.join(' ')}">
+            <h3>${page.heading}</h3>
+            <h1>${page.subHeading}</h1>
+            <button type="button">Explore Now</button>
+          </div>
+          <img src="images/slider/${page.no}.jpg" alt="${page.heading}">
+        </div>`
 
-      navElements += `<span id="nav-${page.no}" class="${page.active ? 'active': ''}"></span>`;
+      navElements += `<span id="full-page-slider-nav-${page.no}" class="${page.active ? 'active': ''}"></span>`;
     });
     $('pages').innerHTML = slideElements;
     $('pagination').innerHTML = navElements;
 
     pages.forEach(page => {
-      $(`nav-${page.no}`).onclick = () => changePage(page.no);
+      $(`full-page-slider-nav-${page.no}`).onclick = () => changePage(page.no);
     });
   };
 
@@ -75,4 +75,3 @@
     }
   }
 })();
-
