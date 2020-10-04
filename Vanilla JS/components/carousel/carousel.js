@@ -22,6 +22,7 @@
   function generateSlider() {
     let slideElements = '';
     let navElements = '';
+
     pages.forEach(page => {
       slideElements += `
         <div>
@@ -35,6 +36,7 @@
 
       navElements += `<span id="full-page-slider-nav-${page.no}" class="${page.active ? 'active': ''}"></span>`;
     });
+
     $('pages').innerHTML = slideElements;
     $('pagination').innerHTML = navElements;
 
@@ -46,7 +48,6 @@
   generateSlider();
 
   function changePage(pageNo) {
-
     pages.forEach(page => {
       // set active page
       page.active  = pageNo === page.no ? true : false;
