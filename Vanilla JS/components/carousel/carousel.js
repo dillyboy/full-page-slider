@@ -25,14 +25,14 @@
 
     pages.forEach(page => {
       slideElements += `
-        <div>
-          <div class="TextContainer ${page.classes.join(' ')}">
-            <h3>${page.heading}</h3>
-            <h1>${page.subHeading}</h1>
-            <button type="button">Explore Now</button>
-          </div>
-          <img src="images/slider/${page.no}.jpg" alt="${page.heading}">
-        </div>`
+          <div>
+            <div class="TextContainer ${page.classes.join(' ')}">
+              <h3>${page.heading}</h3>
+              <h1>${page.subHeading}</h1>
+              <button type="button">Explore Now</button>
+            </div>
+            <img src="images/slider/${page.no}.jpg" alt="${page.heading}">
+          </div>`
 
       navElements += `<span id="full-page-slider-nav-${page.no}" class="${page.active ? 'active': ''}"></span>`;
     });
@@ -43,9 +43,10 @@
     pages.forEach(page => {
       $(`full-page-slider-nav-${page.no}`).onclick = () => changePage(page.no);
     });
-  };
 
-  generateSlider();
+  }
+
+  generateSlider() ;
 
   function changePage(pageNo) {
     pages.forEach(page => {
