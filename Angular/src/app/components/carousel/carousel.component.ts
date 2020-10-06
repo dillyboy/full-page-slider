@@ -74,5 +74,4 @@ export class CarouselComponent {
       this.changePage(currentPage + 1);
     }
   }
-
 }
