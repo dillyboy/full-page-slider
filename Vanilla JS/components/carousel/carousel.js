@@ -1,7 +1,7 @@
 (() => {
   const $ = function( id ) { return document.getElementById( id ); } // make it easier to select by id
   const TIMEOUT_DURATION = 5000;
-  let timer = setInterval(autoPlay, TIMEOUT_DURATION);
+  let timer = setTimeout(autoPlay, TIMEOUT_DURATION);
 
   const pages = [
     {
@@ -63,8 +63,8 @@
     });
     generateSlider();
     $('pages').scrollLeft = ($('pages').clientWidth * pageNo) - $('pages').clientWidth;
-    clearInterval(timer);
-    timer = setInterval(autoPlay, TIMEOUT_DURATION);
+    clearTimeout(timer);
+    timer = setTimeout(autoPlay, TIMEOUT_DURATION);
   }
 
   function autoPlay() {

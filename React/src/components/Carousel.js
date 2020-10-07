@@ -21,7 +21,7 @@ const Carousel = (props) => {
   ]);
 
   useEffect(() => {
-    const timer = setInterval(() => {
+    const timer = setTimeout(() => {
       const currentPage = pages.findIndex(x => x.active) + 1;
       if (currentPage === pages.length) {
         changePage(1);
