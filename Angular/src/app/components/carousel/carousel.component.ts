@@ -1,4 +1,4 @@
-import {Component, ElementRef, ViewChild} from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-carousel',
@@ -9,7 +9,7 @@ import {Component, ElementRef, ViewChild} from '@angular/core';
           <div class="TextContainer {{page.classes.join(' ')}}">
             <h3>{{page.heading}}</h3>
             <h1>{{page.subHeading}}</h1>
-            <button type="button" (click)="changePage(page.no)">Explore Now</button>
+            <button type="button">Explore Now</button>
           </div>
           <img src="/assets/images/slider/{{page.no}}.jpg" [alt]="page.heading" />
         </div>
@@ -20,7 +20,6 @@ import {Component, ElementRef, ViewChild} from '@angular/core';
     </div>`,
   styleUrls: ['./carousel.component.scss']
 })
-
 export class CarouselComponent {
 
   @ViewChild('pagesRef') pagesRef: ElementRef;

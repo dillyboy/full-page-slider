@@ -49,8 +49,7 @@ const Carousel = (props) => {
     });
     setPages(newPageList);
 
-    const scrollLeft = (widthRef.current.clientWidth * pageNo) - widthRef.current.clientWidth;
-    widthRef.current.scrollLeft = scrollLeft;
+    widthRef.current.scrollLeft = (widthRef.current.clientWidth * pageNo) - widthRef.current.clientWidth;
   }
 
   return (
