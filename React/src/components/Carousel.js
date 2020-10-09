@@ -3,7 +3,7 @@ import classes from './Carousel.module.scss';
 
 const Carousel = (props) => {
 
-  const widthRef = useRef(null);
+  const pagesRef = useRef(null);
   const [pages, setPages] = useState([
     {
       no: 1, active: true,
@@ -48,13 +48,12 @@ const Carousel = (props) => {
       page.classes = sliderClasses;
     });
     setPages(newPageList);
-
-    widthRef.current.scrollLeft = (widthRef.current.clientWidth * pageNo) - widthRef.current.clientWidth;
+    pagesRef.current.scrollLeft = (pagesRef.current.clientWidth * pageNo) - pagesRef.current.clientWidth;
   }
 
   return (
     <div className={classes.Carousel}>
-      <div className={classes.Pages} ref={widthRef}>
+      <div className={classes.Pages} ref={pagesRef}>
         {pages.map(page => (
           <div key={page.no}>
             <div className={classes.TextContainer + ' ' + page.classes.join(' ')}>
