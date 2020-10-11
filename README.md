@@ -3,6 +3,6 @@ This repo contains the same full-page html slider created with Vanilla JavaScrip
 
 ![alt text](https://github.com/dillyboy/full-page-slider/blob/main/screenshot.png?raw=true)
 
-1. [Vanilla JS implementation Video](https://studio.youtube.com/video/l4FI6MSE7xw)
-2. [Angular implementation Video](https://studio.youtube.com/video/i7urnbvzlME)
-3. [ReactJS implementation Video](https://studio.youtube.com/video/EvRK4PdMdwc)
+1. [Vanilla JS implementation Video](https://youtube.com/watch?v=l4FI6MSE7xw)
+2. [Angular implementation Video](https://youtube.com/watch?v=i7urnbvzlME)
+3. [ReactJS implementation Video](https://youtube.com/watch?v=EvRK4PdMdwc)
